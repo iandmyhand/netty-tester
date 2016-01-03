@@ -1,4 +1,4 @@
-package study.hard.netty;
+package study.hard.netty._01_discard;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

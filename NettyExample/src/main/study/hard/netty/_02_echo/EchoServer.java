@@ -1,4 +1,4 @@
-package study.hard.netty;
+package study.hard.netty._02_echo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,7 +9,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-public class DiscardServer {
+public class EchoServer {
 	
 	public static void main(String[] args) throws Exception {
 		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -22,7 +22,7 @@ public class DiscardServer {
 					@Override
 					public void initChannel(SocketChannel ch) {
 						ChannelPipeline p = ch.pipeline();
-						p.addLast(new DiscardServerHandler());
+						p.addLast(new EchoServerHandler());
 					}
 				});
 			
