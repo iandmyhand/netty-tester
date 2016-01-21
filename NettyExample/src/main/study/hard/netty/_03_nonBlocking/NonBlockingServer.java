@@ -13,6 +13,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Run this application. 
+ * And connect with telnet
+ * 		$ telnet localhost 8888
+ * And type anything!
+ * 
+ * @author SeomGi, Han (iandmyhand@gmail.com)
+ *
+ */
 public class NonBlockingServer {
 	private Map<SocketChannel, List<byte[]>> keepDataTrack = new HashMap<>();
 	private ByteBuffer buffer = ByteBuffer.allocate(2 * 1024);
